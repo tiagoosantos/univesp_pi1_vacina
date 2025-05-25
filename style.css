@@ -1,21 +1,114 @@
-/* style.css */
+/* Variáveis de cor */
+:root {
+  --cor-primaria: #007bff; /* azul bootstrap */
+  --cor-secundaria: #28a745; /* verde bootstrap */
+  --cor-fundo-claro: #f0f4ff;
+  --cor-texto: #333;
+}
+
+/* Plano de fundo degradê suave */
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #e0ebff 0%, #ffffff 100%);
+  color: var(--cor-texto);
+  min-height: 100vh;
 }
 
-#fase-text {
-  text-transform: capitalize;
+/* Logo */
+.logo {
+  height: 80px;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
 }
 
-button.btn-sm {
-  padding: 0.25rem 0.5rem;
-  font-size: 0.875rem;
+/* Títulos */
+h1 {
+  font-weight: 600;
+  font-size: 2.75rem;
+  color: var(--cor-primaria);
 }
 
+h5 {
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: var(--cor-secundaria);
+  margin-top: 1.5rem;
+}
+
+/* Botões arredondados e com padding */
+.btn {
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 10px 24px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+  background-color: var(--cor-primaria);
+  border-color: var(--cor-primaria);
+}
+
+.btn-primary:hover, 
+.btn-primary:focus {
+  background-color: #0056b3;
+  border-color: #004a99;
+}
+
+.btn-success {
+  background-color: var(--cor-secundaria);
+  border-color: var(--cor-secundaria);
+}
+
+.btn-success:hover,
+.btn-success:focus {
+  background-color: #1e7e34;
+  border-color: #19692c;
+}
+
+/* Inputs com sombra leve e borda arredondada */
+input.form-control, select.form-select {
+  border-radius: 12px;
+  box-shadow: inset 0 1px 3px rgb(0 0 0 / 0.1);
+  border: 1px solid #ced4da;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input.form-control:focus, select.form-select:focus {
+  border-color: var(--cor-primaria);
+  box-shadow: 0 0 8px var(--cor-primaria);
+  outline: none;
+}
+
+/* Lista vacinas informadas */
 #lista-vacinas-informadas {
-  min-height: 100px;
+  max-height: 280px;
+  overflow-y: auto;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
   background-color: #fff;
-  border: 1px solid #dee2e6;
   padding: 10px;
-  border-radius: 5px;
+}
+
+/* Resultado */
+#resultado {
+  background-color: #ffffffcc;
+  border: 1px solid #ced4da;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
+  color: var(--cor-texto);
+  font-size: 1.1rem;
+}
+
+/* Links */
+a.btn-outline-primary {
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 10px 24px;
+}
+
+/* Pequenos ajustes para espaçamento */
+.container {
+  max-width: 720px;
 }
