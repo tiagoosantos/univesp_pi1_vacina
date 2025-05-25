@@ -1,16 +1,40 @@
 // script.js
 const calendario = {
-    crianca: [
-      { nome: 'BCG', doses: 1, periodo: null },
-      { nome: 'Hepatite B', doses: 3, periodo: { inicio: 0, fim: 1 } },
-    ],
-    adolescente: [
-      { nome: 'HPV', doses: 2, periodo: { inicio: 9, fim: 14 } },
-    ],
-    adulto: [
-      { nome: 'dT (difteria e tétano)', doses: 'reforço a cada 10 anos', periodo: null },
-    ]
-  };
+  crianca: [
+    { nome: 'BCG', doses: 1, idade: 'ao nascer' },
+    { nome: 'Hepatite B', doses: 3, idade: 'ao nascer, 1 e 6 meses' },
+    { nome: 'Pentavalente', doses: 3, idade: '2, 4 e 6 meses' },
+    { nome: 'Poliomielite (VIP)', doses: 3, idade: '2, 4 e 6 meses' },
+    { nome: 'Rotavírus Humano', doses: 2, idade: '2 e 4 meses' },
+    { nome: 'Pneumocócica 10-valente', doses: 2, idade: '2 e 4 meses' },
+    { nome: 'Meningocócica C (conjugada)', doses: 2, idade: '3 e 5 meses' },
+    { nome: 'Febre Amarela', doses: 1, idade: '9 meses' },
+    { nome: 'Tríplice Viral (SCR)', doses: 1, idade: '12 meses' },
+    { nome: 'Hepatite A', doses: 1, idade: '15 meses' },
+    { nome: 'Tetra Viral (SCRV)', doses: 1, idade: '15 meses' },
+    { nome: 'DTP (1º reforço)', doses: 1, idade: '15 meses' },
+    { nome: 'Poliomielite (VOP) (1º reforço)', doses: 1, idade: '15 meses' },
+    { nome: 'DTP (2º reforço)', doses: 1, idade: '4 anos' },
+    { nome: 'Poliomielite (VOP) (2º reforço)', doses: 1, idade: '4 anos' },
+    { nome: 'Varicela', doses: 1, idade: '4 anos' }
+  ],
+  adolescente: [
+    { nome: 'HPV quadrivalente', doses: 2, idade: '9 a 14 anos' },
+    { nome: 'Meningocócica ACWY', doses: 1, idade: '11 a 14 anos' },
+    { nome: 'Hepatite B', doses: 3, idade: 'a qualquer tempo' },
+    { nome: 'Difteria e Tétano (dT)', doses: 3, idade: 'a qualquer tempo' },
+    { nome: 'Tríplice Viral (SCR)', doses: 2, idade: 'a qualquer tempo' },
+    { nome: 'Febre Amarela', doses: 1, idade: 'a qualquer tempo' }
+  ],
+  adulto: [
+    { nome: 'Hepatite B', doses: 3, idade: 'a qualquer tempo' },
+    { nome: 'Difteria e Tétano (dT)', doses: 3, idade: 'a qualquer tempo' },
+    { nome: 'Febre Amarela', doses: 1, idade: 'a qualquer tempo' },
+    { nome: 'Tríplice Viral (SCR)', doses: 2, idade: 'até 29 anos' },
+    { nome: 'Tríplice Viral (SCR)', doses: 1, idade: '30 a 59 anos' }
+  ]
+};
+
   
   const birthInput = document.getElementById('birthdate');
   const faseContainer = document.getElementById('fase-container');
