@@ -4,20 +4,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Verificador de Vacinação</title>
-
-  <!-- Fonte Inter -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
-  
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.4.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body class="bg-light">
+
   <div class="container py-5">
-    <div class="text-center mb-4">
+    <div class="text-center mb-3">
       <img src="https://univesp.br/sites/527174b7b24a527adc000002/assets/590b74fa9caf4d3c61001001/Univesp_logo_png_rgb.png" alt="Logo UNIVESP" class="logo" />
     </div>
 
-    <h1 class="text-center mb-4">Verificador de Vacinação</h1>
+    <h1 class="text-center mb-2">Verificador de Vacinação</h1>
+
+    <p class="text-center lead mb-4">
+      Este sistema permite verificar se a sua carteira de vacinação está em dia de acordo com o <strong>Calendário Nacional de Vacinação</strong>.
+      Informe sua data de nascimento, registre as vacinas que já tomou, e descubra o seu status vacinal!
+    </p>
 
     <div class="mb-3">
       <label for="birthdate" class="form-label">Data de Nascimento</label>
@@ -25,7 +27,7 @@
     </div>
 
     <div id="fase-container" class="d-none">
-      <p class="fs-5">Fase: <strong id="fase-text"></strong></p>
+      <p>Fase: <strong id="fase-text"></strong></p>
 
       <div class="row">
         <div class="col-md-6">
@@ -44,13 +46,17 @@
       <div class="mt-5">
         <h5>Calendário Nacional de Vacinação 2025</h5>
         <p>Consulte o calendário completo oficial no site do Ministério da Saúde:</p>
-        <a href="https://www.gov.br/saude-de-a-a-z-1/pt-br/vacinacao/calendario" target="_blank" class="btn btn-outline-primary mb-3">
+        <a href="https://www.gov.br/saude-de-a-a-z-1/pt-br/vacinacao/calendario" target="_blank" class="btn btn-outline-primary">
           Acessar Calendário Nacional
         </a>
-
       </div>
     </div>
   </div>
+
+  <footer class="text-center mt-5 pt-4 border-top small text-muted">
+    <p class="mb-1">Projeto Integrador 1 – Curso de <strong>Ciência de Dados</strong> – UNIVESP</p>
+    <p class="mb-0">Desenvolvido por: Tiago Oliveira, Camila Amorim e Leandro Paixão</p>
+  </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.4.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="script.js"></script>
