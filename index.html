@@ -1,4 +1,4 @@
-<!// index.html>
+// index.html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -20,11 +20,18 @@
     <div id="fase-container" class="d-none">
       <p>Fase: <strong id="fase-text"></strong></p>
 
-      <div id="vacinas-container"></div>
+      <div class="row">
+        <div class="col-md-6">
+          <div id="form-vacina-container"></div>
+          <button id="add-vacina-btn" class="btn btn-primary me-2 mt-2">Adicionar Vacina</button>
+        </div>
+        <div class="col-md-6">
+          <h5>Vacinas Informadas</h5>
+          <ul id="lista-vacinas-informadas" class="list-group"></ul>
+        </div>
+      </div>
 
-      <button id="add-vacina-btn" class="btn btn-primary me-2">Adicionar Vacina</button>
-      <button id="concluir-btn" class="btn btn-success">Concluir</button>
-
+      <button id="concluir-btn" class="btn btn-success mt-3">Concluir</button>
       <div id="resultado" class="mt-4"></div>
     </div>
   </div>
